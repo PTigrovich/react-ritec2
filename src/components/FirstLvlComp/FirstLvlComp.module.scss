@@ -39,7 +39,7 @@
 	height: 140px;
 
 	color:rgba(0, 136, 194, 1);
-	font-size: 30px;
+	font-size: 23px;
 	font-weight: 600;
 	letter-spacing: .2px;
 	background-color: transparent !important;
@@ -67,7 +67,7 @@
 	p{
 		padding-top:20px;
 		color:rgb(36, 35, 35);
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: 300;
 		letter-spacing: 2.1px;
 		line-height: 1.25;
@@ -80,6 +80,7 @@
 	min-height: 0; /* Разрешаем уменьшение */
 	display: flex;
 
+	
 	// background-color: rgb(46, 222, 137);
 	// opacity: .5;
 
@@ -91,8 +92,10 @@
 	height: 100%;
 	object-fit: cover;
 	object-position: center;
-	background-color: rgb(189, 16, 198);
-	
+	background-size: contain;       // Сохраняет пропорции, вписывает целиком
+   background-repeat: no-repeat;   // Запрещает повторение изображения
+   background-position: center;    // Центрирует изображение
+   background-origin: content-box; // Учитывает padding при позиционировании
 }
 
 
@@ -100,4 +103,5 @@
 .invSpace{
 	letter-spacing: .9em; /* Невидимый отступ */
    color: transparent;
+	
 }

@@ -33,7 +33,9 @@ function FirstLvlComp({ item }) {
             </div>
 
             <div className={styles.imageBlock}>
-                <img className={styles.image} src={item.image.src} alt={item.image.alt} />
+                {item.image.map((image, index) => (
+                    <img key={index} className={styles.image} src={image.src} alt={image.alt} />
+                ))}
             </div>
         </>
     );
