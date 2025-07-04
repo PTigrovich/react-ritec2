@@ -1,0 +1,65 @@
+.background {
+	min-height: 100vh;
+	width: 100vw;
+	background-image: url('../../assets/background-managment.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	display: flex; 
+	flex-direction: column;
+
+	// justify-content: center;
+	align-items: center;
+
+	position:relative;
+ }
+
+ .titleWrapper {
+	max-height: 100%;
+	// background-color: rgb(183, 160, 44);
+	// opacity: 0.5;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	
+
+	h2 {
+		
+		letter-spacing: 2px;
+		color:rgb(9, 9, 9);
+		font-size: 80px;
+		font-weight:500;
+	}
+}
+
+.logoWrapper {
+	height: 80px;
+	display: flex;
+	justify-content: center; 
+	align-items: center;
+	width: 100%;
+}
+
+.logoImage {
+	max-height: 100%; // Регулируйте по необходимости
+}
+
+.manWrapper{
+	display:flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 700px;
+	row-gap: 10px;
+	column-gap: 100px;
+	margin-top: 20px;
+}
+
+.manWrapper .textWhite {
+	color: white;
+}
+
+ 

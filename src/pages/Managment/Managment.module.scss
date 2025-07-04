@@ -1,0 +1,62 @@
+.background {
+	min-height: 100vh;
+	width: 100vw;
+	background-image: url('../../assets/background-managment.jpg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	display: flex; 
+	flex-direction: column;
+
+	// justify-content: center;
+	// align-items: center;
+
+	position:relative;
+ }
+
+ .logoWrapper {
+	 
+	height: 230px;
+	display: flex;
+	justify-content: space-between; // Распределение по краям
+	align-items: center; // Выравнивание по вертикали
+	width: 100%;
+	padding: 0 165px;
+	padding-top: 90px;
+	position: absolute;
+ }
+
+ .logoImage {
+	max-height: 100%; // Регулируйте по необходимости
+	width: auto;
+	
+	&:first-child {
+	  margin-right: auto; // Левый логотип прижимается к левому краю
+	}
+	
+	&:last-child {
+	  margin-left: auto; // Правый логотип прижимается к правому краю
+	}
+ }
+
+ .buttonsContainer{
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+	margin: auto; 
+	gap: 40px;
+ }
+
+ .contentButton{
+	width: 815px;
+	height: 240px;
+	background-color: transparent !important;	
+	white-space: pre-line;
+	font-size: 30px;
+	padding-left: 250px;
+ }
+
+ 
+
+ 
