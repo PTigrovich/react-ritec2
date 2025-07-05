@@ -1,15 +1,16 @@
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+
 import styles from './FirstLvlComp.module.scss';
 import Button from '../Button/Button';
 import { useNavigate } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect, useMemo } from 'react';
 
 function FirstLvlComp({ item }) {
-    const navigate = useNavigate();
+	const navigate = useNavigate();
     const [currentSlide, setCurrentSlide] = useState(0);
     const [loaded, setLoaded] = useState(false);
+    const [sliderKey, setSliderKey] = useState(Date.now());
 
     const [sliderRef, instanceRef] = useKeenSlider({
         initial: 0,
@@ -19,7 +20,21 @@ function FirstLvlComp({ item }) {
         created() {
             setLoaded(true);
         },
+        destroyed() {
+            setLoaded(false);
+        },
     });
+
+	 useEffect(() => {
+         // При смене элемента полностью пересоздаем слайдер
+         setCurrentSlide(0);
+         setSliderKey(Date.now()); // Новый ключ заставит React пересоздать слайдер
+
+         // Уничтожаем старый экземпляр слайдера
+         if (instanceRef.current) {
+             instanceRef.current.destroy();
+         }
+     }, [item]);
 
     if (!item) return null;
 
@@ -29,7 +44,7 @@ function FirstLvlComp({ item }) {
                 <div className={styles.textColumn}>
                     <h2>{item.title1}</h2>
                     <h3>{item.title2}</h3>
-                    <p>
+                    <p className={styles.mainP}>
                         <span className={styles.invSpace}>g </span>
                         {item.description}
                     </p>
@@ -43,7 +58,9 @@ function FirstLvlComp({ item }) {
             </div>
 
             <div className={styles.sliderContainer}>
-                <div ref={sliderRef} className="keen-slider">
+                <div ref={sliderRef} 
+					 		className="keen-slider" 
+							key={sliderKey}>
                     {item.image.map((image, index) => (
                         <div key={index} className="keen-slider__slide">
                             <img className={styles.image} src={image.src} alt={image.alt} />
@@ -51,7 +68,7 @@ function FirstLvlComp({ item }) {
                     ))}
                 </div>
 
-                {loaded && instanceRef.current && (
+                {loaded && instanceRef.current && item.image?.length > 1 && (
                     <div className={styles.sliderControls}>
                         <button
                             onClick={e => {
@@ -60,9 +77,7 @@ function FirstLvlComp({ item }) {
                             }}
                             disabled={currentSlide === 0}
                             className={styles.sliderArrow}
-                        >
-                            <FaChevronLeft />
-                        </button>
+                        />
 
                         <button
                             onClick={e => {
@@ -71,9 +86,7 @@ function FirstLvlComp({ item }) {
                             }}
                             disabled={currentSlide === instanceRef.current.track.details.slides.length - 1}
                             className={styles.sliderArrow}
-                        >
-                            <FaChevronRight />
-                        </button>
+                        />
                     </div>
                 )}
             </div>
