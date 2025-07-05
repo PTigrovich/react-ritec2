@@ -11,10 +11,12 @@ export const data = [
             { text: 'Добыча высоковязкой нефти', path: '/first-lvl-cont/11', src: '/images/fristLvlContent.png', alt: 'рамка' },
             { text: 'Эффективность и экологическая безопасность', path: '/first-lvl-cont/12', src: '/images/fristLvlContent.png', alt: 'рамка' },
         ],
-        image: [{
-            src: '/images/concern-photo1.jpg',
-            alt: 'фото',
-        }],
+        image: [
+            {
+                src: '/images/concern-photo1.jpg',
+                alt: 'фото',
+            },
+        ],
     },
     {
         id: 2,
@@ -95,35 +97,35 @@ export const data = [
         image: [
             {
                 src: '/images/science01.jpg',
-                alt: 'volgograd',
+                alt: 'science',
             },
             {
                 src: '/images/science02.jpg',
-                alt: 'volgograd',
+                alt: 'science',
             },
             {
                 src: '/images/science03.jpg',
-                alt: 'volgograd',
+                alt: 'science',
             },
             {
                 src: '/images/science04.jpg',
-                alt: 'volgograd',
+                alt: 'science',
             },
             {
                 src: '/images/science05.jpg',
-                alt: 'volgograd',
+                alt: 'science',
             },
             {
                 src: '/images/science06.jpg',
-                alt: 'volgograd',
+                alt: 'science',
             },
             {
                 src: '/images/science07.jpg',
-                alt: 'volgograd',
+                alt: 'science',
             },
             {
                 src: '/images/science08.jpg',
-                alt: 'volgograd',
+                alt: 'science',
             },
         ],
     },
@@ -138,51 +140,47 @@ export const data = [
         image: [
             {
                 src: '/images/profMaster/01.jpg',
-                alt: 'volgograd',
+                alt: 'profMaster',
             },
             {
                 src: '/images/profMaster/02.jpg',
-                alt: 'volgograd',
+                alt: 'profMaster',
             },
             {
                 src: '/images/profMaster/03.jpg',
-                alt: 'volgograd',
+                alt: 'profMaster',
             },
             {
                 src: '/images/profMaster/04.jpg',
-                alt: 'volgograd',
+                alt: 'profMaster',
             },
             {
                 src: '/images/profMaster/05.jpg',
-                alt: 'volgograd',
+                alt: 'profMaster',
             },
             {
                 src: '/images/profMaster/06.jpg',
-                alt: 'volgograd',
+                alt: 'profMaster',
             },
             {
                 src: '/images/profMaster/07.jpg',
-                alt: 'volgograd',
+                alt: 'profMaster',
             },
             {
                 src: '/images/profMaster/08.jpg',
-                alt: 'volgograd',
+                alt: 'profMaster',
             },
             {
                 src: '/images/profMaster/09.jpg',
-                alt: 'volgograd',
-            },
-            {
-                src: '/images/profMaster/10.jpg',
-                alt: 'volgograd',
+                alt: 'profMaster',
             },
             {
                 src: '/images/profMaster/11.jpg',
-                alt: 'volgograd',
+                alt: 'profMaster',
             },
             {
                 src: '/images/profMaster/12.jpg',
-                alt: 'volgograd',
+                alt: 'profMaster',
             },
         ],
     },
@@ -511,10 +509,12 @@ export const data = [
         description:
             'За время своего существования ЛУКОЙЛ стал мировым лидером в основных сферах своей деятельности. Занимаясь добычей и переработкой нефти и газа, производством нефтепродуктов и продуктов нефтехимии, Компания поставляет продукты, энергию и тепло миллионам потребителей по всему миру. ЛУКОЙЛ — одна из крупнейших публичных вертикально интегрированных нефтегазовых компаний в мире, на долю которой приходится около 2% мировой добычи нефти и около 1% доказанных запасов углеводородов. Ежедневно продукцию Компании, энергию и тепло покупают миллионы людей более чем в 100 странах мира, улучшая качество своей жизни. Более 100 тысяч человек объединяют свои усилия и таланты, чтобы обеспечить эффективное развитие Компании и ее передовые позиции на рынке. Миссия Компании Мы созданы, чтобы энергию природных ресурсов обратить во благо человека, эффективно и ответственно разрабатывать доверенные нам уникальные месторождения углеводородов, обеспечивая рост Компании, благополучие ее работников и общества в целом.',
         buttons: [],
-        image: [{
-            src: '/images/LukoilNewLogo.jpg',
-            alt: 'лукойл',
-        }],
+        image: [
+            {
+                src: '/images/LukoilNewLogo.jpg',
+                alt: 'лукойл',
+            },
+        ],
     },
     {
         id: 14,
@@ -524,9 +524,11 @@ export const data = [
         description:
             'Российская инновационная топливно-энергетическая компания (РИТЭК) основана в 1992 году, входит в Группу «ЛУКОЙЛ». Общество ведет свою деятельность в 10 субъектах РФ - от Нижней Волги до Южного Урала, специализируется на производстве, испытаниях и внедрении новых технологий, техники и оборудования для добычи трудноизвлекаемых запасов углеводородов и повышения нефтеотдачи. Разработки ООО «РИТЭК» позволяют осуществлять эффективное и безопасное освоение сложных месторождений, повышают экологичность нефтедобычи. Свыше 30% от общего объема нефти предприятие добывает за счет применения новых технологий и собственных инновационных разработок.',
         buttons: [],
-        image: [{
-            src: '/images/RitekNewLogo.JPG',
-            alt: 'ритэк',
-        }],
+        image: [
+            {
+                src: '/images/RitekNewLogo.JPG',
+                alt: 'ритэк',
+            },
+        ],
     },
 ];
