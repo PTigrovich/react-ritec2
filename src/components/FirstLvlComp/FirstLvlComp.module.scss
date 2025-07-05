@@ -49,6 +49,7 @@
 	display:flex;
 	flex-direction: column;
 	padding-top: 100px;
+	overflow-y: auto;
 
 	h2{
 		color:rgb(51, 118, 189);
@@ -71,6 +72,8 @@
 		font-weight: 300;
 		letter-spacing: 2.1px;
 		line-height: 1.25;
+		overflow-y: auto;
+		max-height: 60vh;
 	}
 }
 
