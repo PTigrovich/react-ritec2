@@ -85,8 +85,25 @@
 	justify-content: center; 
 	background-color: rgb(255, 255, 255);
 	color:rgba(0, 136, 194, 1);
-	font-size: 20px;
+	font-size: 18px;
 	margin: 0 10px; 
+	
+	
+	object-fit: cover;
+	object-position: center;
+	background-size: contain;       // Сохраняет пропорции, вписывает целиком
+   background-repeat: no-repeat;   // Запрещает повторение изображения
+   background-position: center;    // Центрирует изображение
+   // background-origin: content-box;
+	background-color: transparent !important;
+
+	&:first-child {
+		padding-left: 100px;
+	 }
+
+	 &:last-child {
+		padding-right: 100px;
+	 }
 }
 
 .videoModal {

@@ -107,8 +107,14 @@ function Founder() {
                     text={'СМОТРЕТЬ ФИЛЬМ'}
                     className={styles.mediaButton}
                     onClick={() => openFullscreenVideo('/videos/video.mp4')} // Исправлен путь (убрана лишняя 's')
+                    iconSrc={'/images/videoButton.png'}
                 />
-                <Button text={'СМОТРЕТЬ ИНТЕРВЬЮ'} className={styles.mediaButton} onClick={() => openFullscreenVideo('/videos/video.mp4')} />
+                <Button
+                    text={'СМОТРЕТЬ ИНТЕРВЬЮ'}
+                    className={styles.mediaButton}
+                    onClick={() => openFullscreenVideo('/videos/interview.mp4')}
+                    iconSrc={'/images/interviewButton.png'}
+                />
             </div>
             {videoUrl && (
                 <video
