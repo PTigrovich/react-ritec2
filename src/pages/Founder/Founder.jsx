@@ -104,7 +104,7 @@ function Founder() {
         <Button
           text={'СМОТРЕТЬ ФИЛЬМ'}
           className={styles.mediaButton}
-          onClick={() => openFullscreenVideo('/videos/video.mov')} // Исправлен путь (убрана лишняя 's')
+          onClick={() => openFullscreenVideo('/videos/video.mp4')} // Исправлен путь (убрана лишняя 's')
           iconSrc={'/images/videoButton.png'}
         />
         <Button
