@@ -116,20 +116,24 @@ function Founder() {
                     iconSrc={'/images/interviewButton.png'}
                 />
             </div>
+
             {videoUrl && (
-                <video
-                    ref={videoRef}
-                    controls
-                    autoPlay
-                    muted
-                    style={{ position: 'fixed', top: '-100vh' }} // Альтернатива display: none
-                    onEnded={handleClose}
-                    onError={e => console.error('Video error:', e)}
-                >
-                    <source src={videoUrl} type="video/mp4" />
-                    Ваш браузер не поддерживает видео.
-                </video>
+                <div className={styles.videoWrapper}>
+                    <video
+                        ref={videoRef}
+                        controls
+                        autoPlay
+                        style={{ position: 'fixed', top: '-100vh' }} // Альтернатива display: none
+                        onEnded={handleClose}
+                        onError={e => console.error('Video error:', e)}
+                    >
+                        <source src={videoUrl} type="video/mp4" />
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                    <BackButton className={styles.backButtonVideo} onClick={handleClickMain} />
+                </div>
             )}
+
             <BackButton className={styles.backButton} onClick={handleClickMain} />
         </div>
     );
