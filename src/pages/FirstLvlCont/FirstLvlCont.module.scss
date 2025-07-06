@@ -1,103 +1,98 @@
 .background {
-	min-height: 100vh;
-	width: 100vw;
-	background-image: url('../../assets/background-founder.jpg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100vw;
+  background-image: url('../../assets/background-founder.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-	display: flex; 
+  display: flex;
 
-	position: relative;
+  position: relative;
 
-	padding: 0px 20px 0;
- }
-
-.content{
-	height:80vh;
-	width: 36vw;
-
-	// background-color: rgb(222, 46, 131);
-	// opacity: .5;
+  padding: 0px 20px 0;
 }
 
-.buttonColumn{
-	display:flex;
-	flex-direction: column;
-	align-items: center;
-	width: 100%;
-	row-gap: 45px;
-	column-gap: 30px;
-	padding-top: 50px;
+.content {
+  height: 80vh;
+  width: 36vw;
 
-	// background-color: rgb(19, 18, 18);
-	// opacity: 0.5;
+  // background-color: rgb(222, 46, 131);
+  // opacity: .5;
 }
 
-.button{
-	width: 520px;
-	height: 140px;
+.buttonColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  row-gap: 45px;
+  column-gap: 30px;
+  padding-top: 50px;
 
-	color:rgb(51, 118, 189);
-	font-size: 30px;
-	font-weight: 600;
-	letter-spacing: .2px;
-	
+  // background-color: rgb(19, 18, 18);
+  // opacity: 0.5;
 }
 
-.textColumn{
-	display:flex;
-	flex-direction: column;
-	
+.button {
+  width: 520px;
+  height: 140px;
 
-	h2{
-		color:rgb(51, 118, 189);
-		font-size: 50px;
-		font-weight: 900;
-	}
+  color: rgb(51, 118, 189);
+  font-size: 30px;
 
-	h3{
-		color:rgb(51, 118, 189);
-		margin-top:5px;
-		font-size: 30px;
-		font-weight: 900;
-
-	}
-
-	p{
-		padding-top:30px;
-		color:rgb(36, 35, 35);
-		font-size: 26px;
-		font-weight: 300;
-		letter-spacing: 2.1px;
-		line-height: 1.25;
-	}
+  letter-spacing: 0.2px;
 }
 
-.imageBlock{
-	height:85vh;
-	width: 64vw;
-	min-height: 0; /* Разрешаем уменьшение */
-	display: flex;
+.textColumn {
+  display: flex;
+  flex-direction: column;
 
-	// background-color: rgb(46, 222, 137);
-	// opacity: .5;
+  h2 {
+    color: rgb(51, 118, 189);
+    font-size: 50px;
+    font-weight: bold;
+  }
 
-	padding: 80px 100px 210px 70px;
+  h3 {
+    color: rgb(51, 118, 189);
+    margin-top: 5px;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  p {
+    padding-top: 30px;
+    color: rgb(36, 35, 35);
+    font-size: 26px;
+    font-weight: lighter;
+    letter-spacing: 2.1px;
+    line-height: 1.25;
+  }
 }
 
-.image{
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: center;
-	background-color: rgb(189, 16, 198);
-	opacity: .5;
+.imageBlock {
+  height: 85vh;
+  width: 64vw;
+  min-height: 0; /* Разрешаем уменьшение */
+  display: flex;
+
+  // background-color: rgb(46, 222, 137);
+  // opacity: .5;
+
+  padding: 80px 100px 210px 70px;
 }
 
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  background-color: rgb(189, 16, 198);
+  opacity: 0.5;
+}
 
-
-.invSpace{
-	letter-spacing: .9em; /* Невидимый отступ */
-   color: transparent;
+.invSpace {
+  letter-spacing: 0.9em; /* Невидимый отступ */
+  color: transparent;
 }
