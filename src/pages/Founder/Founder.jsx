@@ -27,23 +27,28 @@ function Founder() {
         };
     }, []);
 
-    const openFullscreenVideo = async url => {
+    const openFullscreenVideo = url => {
         setVideoUrl(url);
 
-        try {
-            await videoRef.current?.play();
-            await videoRef.current?.requestFullscreen();
-
-            // Принудительно поднимаем кнопку после входа в полноэкранный режим
-            const btn = document.querySelector(`.${styles.videoBackButton}`);
-            if (btn) btn.style.zIndex = '2147483647';
-        } catch (e) {
-            console.error('Error:', e);
-            videoRef.current.muted = true;
-            await videoRef.current?.play();
-            await videoRef.current?.requestFullscreen();
-        }
+        // Ждем обновления DOM после setState
+        setTimeout(() => {
+            if (videoRef.current) {
+                // Сначала включаем воспроизведение, затем полноэкранный режим
+                videoRef.current
+                    .play()
+                    .then(() => {
+                        return videoRef.current.requestFullscreen();
+                    })
+                    .catch(e => {
+                        console.error('Error:', e);
+                        // Если воспроизведение не удалось, пробуем с отключенным звуком
+                        videoRef.current.muted = true;
+                        return videoRef.current.play().then(() => videoRef.current.requestFullscreen());
+                    });
+            }
+        }, 100);
     };
+
     const handleClose = () => {
         if (document.fullscreenElement) {
             document.exitFullscreen();
@@ -110,23 +115,24 @@ function Founder() {
                     iconSrc={'/images/interviewButton.png'}
                 />
             </div>
-
             {videoUrl && (
-                <video
-                    className={styles.videoElement}
-                    ref={videoRef}
-                    controls
-                    autoPlay
-                    style={{ position: 'fixed', top: '-100vh' }} // Альтернатива display: none
-                    onEnded={handleClose}
-                    onError={e => console.error('Video error:', e)}
-                >
-                    <source src={videoUrl} type="video/mp4" />
-                    Ваш браузер не поддерживает видео.
-                </video>
+                <>
+                    <video
+                        className={styles.video}
+                        ref={videoRef}
+                        controls
+                        autoPlay
+                        style={{ position: 'fixed', top: '-100vh' }} // Альтернатива display: none
+                        onEnded={handleClose}
+                        onError={e => console.error('Video error:', e)}
+                    >
+                        <source src={videoUrl} type="video/mp4" />
+                        Ваш браузер не поддерживает видео.
+                    </video>
+                    <BackButton className={styles.backButton} onClick={handleClose} />
+                </>
             )}
-
-            <BackButton className={styles.backButton} onClick={handleClickMain} />
+            <BackButton onClick={handleClickMain} />
         </div>
     );
 }

@@ -1,27 +1,26 @@
 .base {
-	height: 160px;
-	width: 550px;
-	border: none;
-	border-radius: 11px;
-	background-color:rgba(255, 255, 255, 1);
-	color: rgba(0, 136, 194, 1);
-	font-size:50px;
-	font-weight: 700;
-	
-	 background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
+  height: 160px;
+  width: 550px;
+  border: none;
+  border-radius: 11px;
+  background-color: rgba(255, 255, 255, 1);
+  color: rgba(0, 136, 194, 1);
+  font-size: 50px;
+  font-weight: bold;
 
-	cursor:  pointer;
-	transition: background-color 0.3s ease; // Плавное изменение яркости
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-	&:active {
-		background-color: rgba(4, 4, 4, 0.2); // Затемнение при нажатии 
-	 }
+  cursor: pointer;
+  transition: background-color 0.3s ease; // Плавное изменение яркости
 
-	 .text{
-		position: relative;
-		z-index: 2
-	 }
+  &:active {
+    background-color: rgba(4, 4, 4, 0.2); // Затемнение при нажатии
+  }
+
+  .text {
+    position: relative;
+    z-index: 2;
+  }
 }
