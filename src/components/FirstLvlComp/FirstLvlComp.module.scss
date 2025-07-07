@@ -18,9 +18,9 @@
   height: 140px;
   padding-top: 20px;
   color: rgba(0, 136, 194, 1);
-  font-size: 23px;
-
-  letter-spacing: 0.2px;
+  font-size: 27px;
+  font-weight: 700;
+  letter-spacing: 0.4px;
   background-color: transparent !important;
 }
 
@@ -33,15 +33,15 @@
   max-height: 81vh;
 
   h2 {
-    color: rgb(51, 118, 189);
-    font-size: 40px;
-    font-weight: bold;
+	color: rgba(0, 136, 194, 1);
+    font-size: 50px;
+    font-weight: 900;
   }
 
   h3 {
-    color: rgb(51, 118, 189);
+	color: rgba(0, 136, 194, 1);
     margin-top: 20px;
-    font-size: 30px;
+    font-size: 35px;
     font-weight: bold;
   }
 
@@ -50,7 +50,7 @@
     max-height: 60vh;
     padding-top: 18px;
     color: rgb(36, 35, 35);
-    font-size: 20px;
+    font-size: 25px;
     font-weight: lighter;
     letter-spacing: 2.1px;
     line-height: 1.25;
@@ -58,7 +58,7 @@
     p {
       padding-bottom: 18px;
       color: rgb(36, 35, 35);
-      font-size: 22px;
+      font-size: 25px;
       font-weight: lighter;
       letter-spacing: 2.1px;
       line-height: 1.25;
