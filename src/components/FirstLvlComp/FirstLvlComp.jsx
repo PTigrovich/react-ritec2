@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState, useEffect, useMemo } from 'react';
 
 function FirstLvlComp({ item }) {
-	const navigate = useNavigate();
+	 const navigate = useNavigate();
     const [currentSlide, setCurrentSlide] = useState(0);
     const [loaded, setLoaded] = useState(false);
     const [sliderKey, setSliderKey] = useState(Date.now());
