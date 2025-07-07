@@ -12,50 +12,50 @@ import ManRitec from './pages/ManRitec/ManRitec';
 import FirstLvlCont from './pages/FirstLvlCont/FirstLvlCont';
 import SecondLvlCont from './pages/SecondLvlCont/SecondLvlCont';
 
+// Глобально отключаем контекстное меню (правый клик и долгий тап)
+document.addEventListener('contextmenu', (e) => e.preventDefault());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
-    {
-        path: '/',
-        element: <Main />,
-    },
-    {
-        path: '/founder',
-        element: <Founder />,
-    },
-    {
-        path: '/managment',
-        element: <Managment />,
-    },
-    {
-        path: '/geography',
-        element: <Geography />,
-    },
-    {
-        path: '/area-of-activity',
-        element: <AreaOfActivity />,
-    },
-    {
-        path: '/website',
-        element: <Website />,
-    },
-    {
-        path: '/dir-lukoil',
-        element: <DirLukoil />,
-    },
-    {
-        path: '/man-ritec',
-        element: <ManRitec />,
-    },
-    {
-        path: '/first-lvl-cont/:id',
-        element: <FirstLvlCont />,
-    },
-    {
-        path: '/second-lvl-cont',
-        element: <SecondLvlCont />,
-    },
+  {
+    path: '/',
+    element: <Main />,
+  },
+  {
+    path: '/founder',
+    element: <Founder />,
+  },
+  {
+    path: '/managment',
+    element: <Managment />,
+  },
+  {
+    path: '/geography',
+    element: <Geography />,
+  },
+  {
+    path: '/area-of-activity',
+    element: <AreaOfActivity />,
+  },
+  {
+    path: '/website',
+    element: <Website />,
+  },
+  {
+    path: '/dir-lukoil',
+    element: <DirLukoil />,
+  },
+  {
+    path: '/man-ritec',
+    element: <ManRitec />,
+  },
+  {
+    path: '/first-lvl-cont/:id',
+    element: <FirstLvlCont />,
+  },
+  {
+    path: '/second-lvl-cont',
+    element: <SecondLvlCont />,
+  },
 ]);
 root.render(<RouterProvider router={router} />);
-
-
