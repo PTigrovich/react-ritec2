@@ -27,19 +27,19 @@
 .textColumn {
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
+  padding-top: 130px;
   overflow-y: auto;
 
-  max-height: 81vh;
+  max-height: 79vh;
 
   h2 {
-	color: rgba(0, 136, 194, 1);
+    color: rgba(0, 136, 194, 1);
     font-size: 50px;
     font-weight: 900;
   }
 
   h3 {
-	color: rgba(0, 136, 194, 1);
+    color: rgba(0, 136, 194, 1);
     margin-top: 20px;
     font-size: 35px;
     font-weight: bold;
