@@ -82,66 +82,66 @@ function FirstLvlComp() {
   const images = Array.isArray(currentItem.image) ? currentItem.image : currentItem.image?.src ? [currentItem.image] : [];
 
   return (
-    <>
-      <div className={styles.content}>
-        <div className={styles.textColumn} style={id === '1' ? { maxHeight: '83vh' } : {}}>
-          <h2>{currentItem.title1}</h2>
-          {currentItem.title2 && <h3>{currentItem.title2}</h3>}
-          <div className={styles.mainP}>
-            <div dangerouslySetInnerHTML={{ __html: currentItem.description }} />
-          </div>
-          {currentItem.buttons?.length > 0 && (
-            <div className={styles.buttonColumn}>
-              {currentItem.buttons.map((button, index) => (
-                <Button key={index} className={styles.button} onClick={() => navigate(button.path)} text={button.text} iconSrc={button.src} />
-              ))}
-            </div>
-          )}
-        </div>
-      </div>
-
-      {images.length > 0 && (
-        <div className={styles.sliderContainer}>
-          <div ref={sliderRef} className="keen-slider" key={sliderKey}>
-            {images.map((image, index) => (
-              <div key={index} className="keen-slider__slide">
-                <img
-                  className={styles.image}
-                  src={image.src}
-                  alt={image.alt || ''}
-                  onError={(e) => {
-                    e.target.src = '/images/placeholder.jpg';
-                  }}
-                />
+      <>
+          <div className={styles.content}>
+              <div className={styles.textColumn} style={id === '1' ? { maxHeight: '83vh' } : {}}>
+                  <h2 style={id === '13' ? { color: '#d14a43' } : {}}>{currentItem.title1}</h2>
+                  {currentItem.title2 && <h3>{currentItem.title2}</h3>}
+                  <div className={styles.mainP}>
+                      <div dangerouslySetInnerHTML={{ __html: currentItem.description }} />
+                  </div>
+                  {currentItem.buttons?.length > 0 && (
+                      <div className={styles.buttonColumn}>
+                          {currentItem.buttons.map((button, index) => (
+                              <Button key={index} className={styles.button} onClick={() => navigate(button.path)} text={button.text} iconSrc={button.src} />
+                          ))}
+                      </div>
+                  )}
               </div>
-            ))}
           </div>
 
-          {loaded && instanceRef.current && images.length > 1 && (
-            <div className={styles.sliderControls}>
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  instanceRef.current?.prev();
-                }}
-                disabled={currentSlide === 0}
-                className={styles.sliderArrow}
-                aria-label="Previous slide"
-              />
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  instanceRef.current?.next();
-                }}
-                disabled={currentSlide === instanceRef.current.track.details.slides.length - 1}
-                className={styles.sliderArrow}
-                aria-label="Next slide"
-              />
-            </div>
+          {images.length > 0 && (
+              <div className={styles.sliderContainer}>
+                  <div ref={sliderRef} className="keen-slider" key={sliderKey}>
+                      {images.map((image, index) => (
+                          <div key={index} className="keen-slider__slide">
+                              <img
+                                  className={styles.image}
+                                  src={image.src}
+                                  alt={image.alt || ''}
+                                  onError={e => {
+                                      e.target.src = '/images/placeholder.jpg';
+                                  }}
+                              />
+                          </div>
+                      ))}
+                  </div>
+
+                  {loaded && instanceRef.current && images.length > 1 && (
+                      <div className={styles.sliderControls}>
+                          <button
+                              onClick={e => {
+                                  e.stopPropagation();
+                                  instanceRef.current?.prev();
+                              }}
+                              disabled={currentSlide === 0}
+                              className={styles.sliderArrow}
+                              aria-label="Previous slide"
+                          />
+                          <button
+                              onClick={e => {
+                                  e.stopPropagation();
+                                  instanceRef.current?.next();
+                              }}
+                              disabled={currentSlide === instanceRef.current.track.details.slides.length - 1}
+                              className={styles.sliderArrow}
+                              aria-label="Next slide"
+                          />
+                      </div>
+                  )}
+              </div>
           )}
-        </div>
-      )}
-    </>
+      </>
   );
 }
 
