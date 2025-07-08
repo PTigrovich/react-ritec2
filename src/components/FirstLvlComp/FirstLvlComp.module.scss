@@ -36,11 +36,12 @@
     color: rgba(0, 136, 194, 1);
     font-size: 50px;
     font-weight: 900;
+	 margin-bottom: 15px;
   }
 
   h3 {
 	color: rgba(0, 136, 194, 1);
-    margin-top: 5px;
+	 margin-bottom: 20px;
     font-size: 30px;
     font-weight: bold;
   }
@@ -58,10 +59,10 @@
     p {
       padding-bottom: 18px;
       color: rgb(36, 35, 35);
-      font-size: 25px;
+      font-size: 18px;
       font-weight: lighter;
-      letter-spacing: 2.1px;
-      line-height: 1.25;
+      
+      line-height: 1.1;
     }
   }
 }
