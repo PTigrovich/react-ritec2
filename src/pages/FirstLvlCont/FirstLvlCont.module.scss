@@ -44,32 +44,7 @@
   letter-spacing: 0.2px;
 }
 
-.textColumn {
-  display: flex;
-  flex-direction: column;
 
-  h2 {
-    color: rgb(51, 118, 189);
-    font-size: 50px;
-    font-weight: bold;
-  }
-
-  h3 {
-    color: rgb(51, 118, 189);
-    margin-top: 5px;
-    font-size: 30px;
-    font-weight: bold;
-  }
-
-  p {
-    padding-top: 30px;
-    color: rgb(36, 35, 35);
-    font-size: 26px;
-    font-weight: lighter;
-    letter-spacing: 2.1px;
-    line-height: 1.25;
-  }
-}
 
 .imageBlock {
   height: 85vh;

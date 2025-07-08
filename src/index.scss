@@ -1,4 +1,10 @@
 @import './styles/fonts';
+@font-face {
+	font-family: 'Calibri';
+	src: url('./assets/fonts/calibri.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+ }
 
 * {
   margin: 0;
