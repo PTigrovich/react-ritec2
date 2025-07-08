@@ -13,7 +13,7 @@ import FirstLvlCont from './pages/FirstLvlCont/FirstLvlCont';
 import SecondLvlCont from './pages/SecondLvlCont/SecondLvlCont';
 
 // Глобально отключаем контекстное меню (правый клик и долгий тап)
-// document.addEventListener('contextmenu', (e) => e.preventDefault());
+document.addEventListener('contextmenu', (e) => e.preventDefault());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 const router = createBrowserRouter([
