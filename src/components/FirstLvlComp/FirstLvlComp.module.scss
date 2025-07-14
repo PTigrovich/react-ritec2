@@ -1,3 +1,5 @@
+@use '../../styles/fonts' as *;
+
 .content {
   height: 80vh;
   width: 36vw;
@@ -49,20 +51,15 @@
   .mainP {
     overflow-y: auto;
     max-height: 60vh;
-
+	 @include font-text();
     color: rgb(36, 35, 35);
-    font-size: 18px;
-    font-weight: lighter;
-    letter-spacing: 2px;
-    line-height: 1.1;
+   
 
     p {
       padding-bottom: 18px;
       color: rgb(36, 35, 35);
-      font-size: 18px;
-      font-weight: lighter;
-      letter-spacing: 2px;
-      line-height: 1.1;
+      
+		@include font-text();
     }
   }
 }
