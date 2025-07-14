@@ -9,3 +9,11 @@
   src: url('../assets/fonts/calibri.ttf') format('truetype');
   font-weight: lighter;
 }
+
+@mixin font-text() {
+  font-family: 'Days', sans-serif;
+  font-size: 18px;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  line-height: 1.1;
+}

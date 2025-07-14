@@ -1,62 +1,61 @@
 .background {
-	min-height: 100vh;
-	width: 100vw;
-	background-image: url('../../assets/background4-2.jpg');
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../../assets/background4-2.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 
-	display: flex; 
+  display: flex;
 
-	position: relative;
+  position: relative;
 
-	padding: 90px 20px 0;
- }
-
-.content{
-	height:85vh;
-	width: 36vw;
-	padding-top: 80px;
-	padding-left: 10px;
-
-	background-color: rgb(222, 46, 131);
-	opacity: .5; 
-	
+  padding: 90px 20px 0;
 }
 
-.textColumn{
-	display:flex;
-	flex-direction: column;
-	row-gap: 65px;
+.content {
+  height: 85vh;
+  width: 36vw;
+  padding-top: 80px;
+  padding-left: 10px;
 
-	h3 + p {
-		margin-top: -65px; 
-   }
+  background-color: rgb(222, 46, 131);
+  opacity: 0.5;
 }
 
-.imageBlock{
-	height:85vh;
-	width: 64vw;
-	min-height: 0; /* Разрешаем уменьшение */
-	display: flex;
+.textColumn {
+  display: flex;
+  flex-direction: column;
+  row-gap: 65px;
 
-	// background-color: rgb(46, 222, 137);
-	// opacity: .5;
-
-	padding: 80px 100px 210px 70px;
+  h3 + p {
+    margin-top: -65px;
+  }
 }
 
-.image{
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	object-position: center;
-	background-color: rgb(189, 16, 198);
-	opacity: .5;
+.imageBlock {
+  height: 85vh;
+  width: 64vw;
+  min-height: 0; /* Разрешаем уменьшение */
+  display: flex;
+
+  // background-color: rgb(46, 222, 137);
+  // opacity: .5;
+
+  padding: 80px 100px 210px 70px;
 }
 
-.backButton{
-	position: absolute;
-	left: 0;
-	bottom: 0;
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  background-color: rgb(189, 16, 198);
+  opacity: 0.5;
+}
+
+.backButton {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }

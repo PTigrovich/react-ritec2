@@ -1,10 +1,4 @@
 @import './styles/fonts';
-@font-face {
-	font-family: 'Calibri';
-	src: url('./assets/fonts/calibri.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
- }
 
 * {
   margin: 0;
@@ -19,5 +13,5 @@
 }
 
 body {
-  font-family: 'Days', 'calibri.ttf';
+  font-family: 'Days', sans-serif;
 }

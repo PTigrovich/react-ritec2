@@ -1,43 +1,41 @@
 .background {
-	min-height: 100vh;
-	width: 100vw;
-	// background-image: url('../../assets/background5.jpg');
-	
-	// background-size: cover;
-	// background-position: center;
-	// background-repeat: no-repeat;
-	display: flex; 
-	flex-direction: column;
-	position: relative;
+  height: 100vh;
+  width: 100vw;
+  // background-image: url('../../assets/background5.jpg');
+
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .backButtonOverride {
-	position: absolute;
-	top: 20px !important;  // Принудительно устанавливаем верхнюю позицию
-	left: 20px !important;
-	bottom: auto !important; // Явно отменяем нижнюю позицию
-	z-index: 100;
+  position: absolute;
+  top: 20px !important; // Принудительно устанавливаем верхнюю позицию
+  left: 20px !important;
+  bottom: auto !important; // Явно отменяем нижнюю позицию
+  z-index: 100;
 }
 
 .siteWrapper {
-	width: 100%;
-	height: calc(100vh - 220px);
-	padding: 0 20px;
-	margin-top: 110px;
-	border: none;
-	background-color: white; // Фон на случай долгой загрузки
-	
-	// Для полного растяжения
-	display: block;
-	box-sizing: border-box;
-	
+  width: 100%;
+  height: calc(100vh - 220px);
+  padding: 0 20px;
+  margin-top: 110px;
+  border: none;
+  background-color: white; // Фон на случай долгой загрузки
+
+  // Для полного растяжения
+  display: block;
+  box-sizing: border-box;
 }
 
 .webButtons {
-	// background-color: rgb(228, 82, 9);
-	// opacity: .5;
-	padding:20px;
-	display: flex;
-	gap: 20px;
+  // background-color: rgb(228, 82, 9);
+  // opacity: .5;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
 }
-
