@@ -3,12 +3,19 @@ import Button from '../../components/Button/Button';
 import BackButton from '../../components/BackButton/BackButton';
 import { useNavigate } from 'react-router-dom';
 import React, { useState, useRef, useEffect } from 'react';
-import { founderData } from '../../data/founder';
 
 export default function Founder() {
   const [videoUrl, setVideoUrl] = useState('');
   const videoRef = useRef(null);
   const navigate = useNavigate();
+  const [founderData, setFounderData] = useState({});
+
+  useEffect(() => {
+    fetch('/data/founder.json')
+      .then((response) => response.json())
+      .then((data) => setFounderData(data))
+      .catch((error) => console.error('Error fetching founder data:', error));
+  }, []);
 
   // Автоматически воспроизводим видео при открытии
   useEffect(() => {
@@ -42,12 +49,12 @@ export default function Founder() {
     <div className={styles.background}>
       <div className={styles.contentWrapper}>
         <div className={styles.imageContainer}>
-          <img className={styles.itemImage} src={founderData.image.src} alt={founderData.image.alt} />
+          <img className={styles.itemImage} src={founderData?.image?.src} alt={founderData?.image?.alt} />
         </div>
         <div className={styles.textWrapper}>
-          <h2 className={styles.firstTitle}>{founderData.title}</h2>
-          <h3 className={styles.secTitle}>{founderData.subtitle}</h3>
-          <p className={styles.itemText}>{founderData.description}</p>
+          <h2 className={styles.firstTitle}>{founderData?.title}</h2>
+          <h3 className={styles.secTitle}>{founderData?.subtitle}</h3>
+          <p className={styles.itemText} dangerouslySetInnerHTML={{ __html: founderData?.description }} />
         </div>
       </div>
 
